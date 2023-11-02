@@ -1,5 +1,5 @@
 # enum_scan
-Scan d'énumération de cibles
+Des Scans d'énumération de cibles en bash
 
 # autoscan_nmap
 - Ce script scanne un réseau ou une @IP
