@@ -117,18 +117,20 @@ nmap -sS -p- --min-rate=1000 10.11.1.229 -Pn #stealth scans
 
 ## Voici une répartition des commandes :
 
-
 nmap --script smb-enum-shares.nse -p445 $IP
 - : cette commande utilise le script Nmap smb-enum-shares.nse pour énumérer les ressources partagées sur l'hôte cible sur le port 445.
 
 nmap –script smb-enum-users.nse -p445 $IP 
-: Cette commande utilise le script Nmap smb-enum-users.nse pour énumérer les utilisateurs sur le serveur SMB cible via le port 445.
+- : Cette commande utilise le script Nmap smb-enum-users.nse pour énumérer les utilisateurs sur le serveur SMB cible via le port 445.
 
-nmap --script smb-enum-domains.nse, smb-enum-groups.nse, smb-enum-processes.nse, smb-enum-services.nse, smb-enum-sessions.nse, smb-enum-shares. nse,smb-enum-users.nse -p445 $IP : ici, plusieurs scripts Nmap sont utilisés pour collecter diverses informations sur les domaines, les groupes, les processus, les services, les sessions, les partages et les utilisateurs sur le serveur SMB cible via le port 445.
+nmap --script smb-enum-domains.nse, smb-enum-groups.nse, smb-enum-processes.nse, smb-enum-services.nse, smb-enum-sessions.nse, smb-enum-shares. nse,smb-enum-users.nse -p445 $IP 
+- : ici, plusieurs scripts Nmap sont utilisés pour collecter diverses informations sur les domaines, les groupes, les processus, les services, les sessions, les partages et les utilisateurs sur le serveur SMB cible via le port 445.
 
-nmap --script smb-vuln-conficker.nse,smb-vuln-cve2009-3103.nse,smb-vuln-cve-2017-7494.nse,smb-vuln-ms06-025.nse,smb-vuln-ms07- 029.nse,smb-vuln-ms08-067.nse,smb-vuln-ms10-054.nse,smb-vuln-ms10-061.nse,smb-vuln-ms17-010.nse,smb-vuln-regsvc- dos.nse,smb-vuln-webexec.nse -p445 $IP : Cette commande est utilisée pour identifier les vulnérabilités potentielles sur le serveur SMB. Il vérifie les vulnérabilités connues telles que Conficker et divers CVE à l'aide de différents scripts Nmap.
+nmap --script smb-vuln-conficker.nse,smb-vuln-cve2009-3103.nse,smb-vuln-cve-2017-7494.nse,smb-vuln-ms06-025.nse,smb-vuln-ms07- 029.nse,smb-vuln-ms08-067.nse,smb-vuln-ms10-054.nse,smb-vuln-ms10-061.nse,smb-vuln-ms17-010.nse,smb-vuln-regsvc- dos.nse,smb-vuln-webexec.nse -p445 $IP 
+- : Cette commande est utilisée pour identifier les vulnérabilités potentielles sur le serveur SMB. Il vérifie les vulnérabilités connues telles que Conficker et divers CVE à l'aide de différents scripts Nmap.
 
-nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-version -p445 $IP : cette commande vérifie spécifiquement la vulnérabilité CVE-2017-7494 et également tente d'identifier la version du logiciel qui peut être affectée.
+nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-version -p445 $IP 
+- : cette commande vérifie spécifiquement la vulnérabilité CVE-2017-7494 et également tente d'identifier la version du logiciel qui peut être affectée.
 
-
-Veuillez noter que pour utiliser ces commandes, vous devez remplacer $IP par l'adresse IP réelle de l'hôte cible que vous souhaitez analyser. De plus, ces commandes doivent être utilisées de manière responsable et uniquement sur les systèmes que vous êtes autorisé à analyser.
+- Veuillez noter que pour utiliser ces commandes, vous devez remplacer $IP par l'adresse IP réelle de l'hôte cible que vous souhaitez analyser.
+-  De plus, ces commandes doivent être utilisées de manière responsable et uniquement sur les systèmes que vous êtes autorisé à analyser.
