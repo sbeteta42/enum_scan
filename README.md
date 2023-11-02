@@ -2,10 +2,13 @@
 Scan d'énumération de cibles
 
 # autoscan_nmap
-Ce script scanne un réseau ou une @I ;
-nmap -p- --min-rate 1000 "$target" : Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse un hôte cible à la recherche de ports ouverts. Les options utilisées sont :
+- Ce script scanne un réseau ou une @IP
+   
+nmap -p- --min-rate 1000 "$target" 
+Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse un hôte cible à la recherche de ports ouverts. Les options utilisées sont :
 
--p- : analyse les 65 535 ports TCP de l'hôte cible.
+-p- 
+: analyse les 65 535 ports TCP de l'hôte cible.
 --min-rate 1000 : définit le taux d'analyse minimum à 1 000 paquets par seconde.
 | grep "^ *[0-9]": Après avoir exécuté l'analyse Nmap, la sortie est redirigée vers grep pour filtrer les lignes commençant par un ou plusieurs espaces suivis d'un chiffre (numéro de port).
 
