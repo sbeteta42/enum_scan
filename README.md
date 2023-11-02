@@ -59,6 +59,7 @@ chmod +x autoscan_nmap.sh
 ### usage: 
 - Récuperer le script autoscan_nmap.sh dans files
 ```bash
+https://github.com/sbeteta42/enum_scan/blob/main/autoscan_smtp.sh
 chmod +x autoscan_smtp.sh
 ./autoscan_smtp.sh @ip_a_scanner
 ```
@@ -81,6 +82,7 @@ La script fourni est une commande nmap utilisée pour analyser les serveurs POP3
 ### usage: 
 - Récuperer le script autoscan_nmap.sh dans files
 ```bash
+wget https://github.com/sbeteta42/enum_scan/blob/main/autoscan_pop3.sh
 chmod +x autoscan_pop3.sh
 ./autoscan_pop3.sh @ip_a_scanner
 ```
@@ -142,6 +144,7 @@ nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-
 ### usage: 
 - Récuperer le script autoscan_smb-vulner.sh dans files
 ```bash
+https://github.com/sbeteta42/enum_scan/blob/main/autoscan_smb-vulner.sh
 chmod +x autoscan_smb-vulner.sh
-./autoscan_pop3.sh @ip_a_scanner
+./autoscan_smb-vulner.sh @ip_a_scanner
 ```
