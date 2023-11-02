@@ -99,3 +99,36 @@ nmap -p <ports> -sV -sC -A $IP
 ```bash
 nmap -sS -p- --min-rate=1000 10.11.1.229 -Pn #stealth scans
 ```
+# Enumération sur les Ports SMB 139 445
+
+- Port 139 NetBIOS signifie Network Basic Input Output System.
+- Il s'agit d'un protocole logiciel qui permet aux applications, aux PC et aux ordinateurs de bureau d'un réseau local (LAN) de communiquer avec le matériel réseau et de transmettre des données sur le réseau.
+- Les applications logicielles qui s'exécutent sur un réseau NetBIOS se localisent et s'identifient mutuellement via leurs noms NetBIOS.
+- Un nom NetBIOS comporte jusqu'à 16 caractères et est généralement distinct du nom de l'ordinateur.
+- 2 applications démarrent une session NetBIOS lorsque l'une (le client) envoie une commande pour « appeler » un autre client (le serveur) via le port TCP 139. 
+
+- Le Port 445 Alors que le port 139 est techniquement connu sous le nom de « NBT sur IP », le port 445 est « SMB sur IP ».
+- SMB signifie « Server Message Blocks ».
+- Le bloc de messages du serveur en langage moderne est également connu sous le nom de Common Internet File System.
+- Le système fonctionne comme un protocole réseau de couche application principalement utilisé pour offrir un accès partagé aux fichiers, imprimantes, ports série et autres types de communications entre les nœuds d'un réseau.
+
+- Les lignes de commande fournies sont des exemples d'utilisation de l'outil Nmap pour effectuer diverses analyses d'énumération et de vulnérabilité SMB (Server Message Block) sur un hôte distant utilisant le port 445.
+- SMB est un protocole réseau utilisé pour partager des fichiers, des imprimantes et d'autres ressources sur un réseau.
+
+## Voici une répartition des commandes :
+
+
+nmap --script smb-enum-shares.nse -p445 $IP
+- : cette commande utilise le script Nmap smb-enum-shares.nse pour énumérer les ressources partagées sur l'hôte cible sur le port 445.
+
+nmap –script smb-enum-users.nse -p445 $IP 
+: Cette commande utilise le script Nmap smb-enum-users.nse pour énumérer les utilisateurs sur le serveur SMB cible via le port 445.
+
+nmap --script smb-enum-domains.nse, smb-enum-groups.nse, smb-enum-processes.nse, smb-enum-services.nse, smb-enum-sessions.nse, smb-enum-shares. nse,smb-enum-users.nse -p445 $IP : ici, plusieurs scripts Nmap sont utilisés pour collecter diverses informations sur les domaines, les groupes, les processus, les services, les sessions, les partages et les utilisateurs sur le serveur SMB cible via le port 445.
+
+nmap --script smb-vuln-conficker.nse,smb-vuln-cve2009-3103.nse,smb-vuln-cve-2017-7494.nse,smb-vuln-ms06-025.nse,smb-vuln-ms07- 029.nse,smb-vuln-ms08-067.nse,smb-vuln-ms10-054.nse,smb-vuln-ms10-061.nse,smb-vuln-ms17-010.nse,smb-vuln-regsvc- dos.nse,smb-vuln-webexec.nse -p445 $IP : Cette commande est utilisée pour identifier les vulnérabilités potentielles sur le serveur SMB. Il vérifie les vulnérabilités connues telles que Conficker et divers CVE à l'aide de différents scripts Nmap.
+
+nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-version -p445 $IP : cette commande vérifie spécifiquement la vulnérabilité CVE-2017-7494 et également tente d'identifier la version du logiciel qui peut être affectée.
+
+
+Veuillez noter que pour utiliser ces commandes, vous devez remplacer $IP par l'adresse IP réelle de l'hôte cible que vous souhaitez analyser. De plus, ces commandes doivent être utilisées de manière responsable et uniquement sur les systèmes que vous êtes autorisé à analyser.
