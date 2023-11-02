@@ -32,6 +32,7 @@ Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse
 - Récuperer le script autoscan_nmap.sh dans files
 
 ```bash
+wget https://github.com/sbeteta42/enum_scan/blob/main/autoscan_nmap.sh
 chmod +x autoscan_nmap.sh
 ./autoscan_nmap.sh @ip_a_scanner
 ```
