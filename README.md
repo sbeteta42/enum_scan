@@ -84,7 +84,7 @@ chmod +x autoscan_pop3.sh
 ./autoscan_pop3.sh @ip_a_scanner
 ```
 
-# Énumération du réseau en ligne de commande
+## Énumération du réseau en ligne de commande
 ```bash
 ping $IP #63 ttl = linux #127 ttl = windows
 ```
@@ -98,7 +98,7 @@ nmap -p- --min-rate 1000 $IP -Pn #désactive la commande ping et analyse uniquem
 nmap -p <ports> -sV -sC -A $IP
 ```
 
-# Stealth Scan
+## Stealth Scan
 ```bash
 nmap -sS -p- --min-rate=1000 10.11.1.229 -Pn #stealth scans
 ```
