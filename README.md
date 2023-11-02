@@ -57,7 +57,7 @@ chmod +x autoscan_nmap.sh
 - Veuillez noter que le $1 dans la commande doit être remplacé par l'adresse IP cible ou le nom d'hôte que vous souhaitez analyser.
 
 ### usage: 
-- Récuperer le script autoscan_nmap.sh dans files
+- Récuperer le script autoscan_smtp.sh dans files
 ```bash
 https://github.com/sbeteta42/enum_scan/blob/main/autoscan_smtp.sh
 chmod +x autoscan_smtp.sh
@@ -80,7 +80,7 @@ La script fourni est une commande nmap utilisée pour analyser les serveurs POP3
 - En résumé, cette commande nmap est conçue pour analyser les serveurs POP3, identifier leurs capacités et collecter des informations sur l'authentification NTLM. Il peut être un outil utile pour les administrateurs réseau et les professionnels de la sécurité pour évaluer la sécurité des services POP3 sur un réseau.
 
 ### usage: 
-- Récuperer le script autoscan_nmap.sh dans files
+- Récuperer le script autoscan_pop3.sh dans files
 ```bash
 wget https://github.com/sbeteta42/enum_scan/blob/main/autoscan_pop3.sh
 chmod +x autoscan_pop3.sh
