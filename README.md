@@ -28,7 +28,8 @@ Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse
 | sed 's/,$//' 
 : Enfin, la commande sed est utilisée pour supprimer la virgule de fin de la liste.
 
-- Récuperer le script autoscan-nmap.sh dans files
+- Récuperer le script autoscan_nmap.sh dans files
+
 ```bash
 chmod +x autoscan_nmap.sh
 ./autoscan_nmap.sh @ip_a_scanner
@@ -53,6 +54,10 @@ chmod +x autoscan_nmap.sh
 - Il est crucial d'effectuer de telles analyses avec l'autorisation appropriée pour éviter les problèmes juridiques et éthiques.
 - Veuillez noter que le $1 dans la commande doit être remplacé par l'adresse IP cible ou le nom d'hôte que vous souhaitez analyser.
 
+- Récuperer le script autoscan_nmap.sh dans files
+```bash
+chmod +x autoscan_smtp.sh
+./autoscan_smtp.sh @ip_a_scanner
 
 # Énumération du réseau en ligne de commande
 ```bash
