@@ -144,7 +144,7 @@ nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-
 ### usage: 
 - Récuperer le script autoscan_smb-vulner.sh dans files
 ```bash
-https://github.com/sbeteta42/enum_scan/blob/main/autoscan_smb-vulner.sh
+wget https://github.com/sbeteta42/enum_scan/blob/main/autoscan_smb-vulner.sh
 chmod +x autoscan_smb-vulner.sh
 ./autoscan_smb-vulner.sh @ip_a_scanner
 ```
