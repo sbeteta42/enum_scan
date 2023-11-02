@@ -9,8 +9,8 @@ Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse
 
 -p- 
 : analyse les 65 535 ports TCP de l'hôte cible.
---min-rate 1000 : définit le taux d'analyse minimum à 1 000 paquets par seconde.
-| grep "^ *[0-9]": Après avoir exécuté l'analyse Nmap, la sortie est redirigée vers grep pour filtrer les lignes commençant par un ou plusieurs espaces suivis d'un chiffre (numéro de port).
+: --min-rate 1000 : définit le taux d'analyse minimum à 1 000 paquets par seconde.
+: | grep "^ *[0-9]": Après avoir exécuté l'analyse Nmap, la sortie est redirigée vers grep pour filtrer les lignes commençant par un ou plusieurs espaces suivis d'un chiffre (numéro de port).
 
 | grep "open" : un filtrage supplémentaire est effectué en utilisant grep pour inclure uniquement les lignes contenant le mot "open", qui indique les ports ouverts.
 
