@@ -8,7 +8,7 @@ nmap -p- --min-rate 1000 "$target"
 Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse un hôte cible à la recherche de ports ouverts. Les options utilisées sont :
 
 -p- 
-: analyse les 65 535 ports TCP de l'hôte cible.
+: analyse les 65535 ports TCP de l'hôte cible.
 
 --min-rate 1000 
 : définit le taux d'analyse minimum à 1 000 paquets par seconde.
@@ -31,8 +31,31 @@ Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse
 - Récuperer le script autoscan-nmap.sh dans files
 ```bash
 chmod +x autoscan_nmap.sh
-./autoscan_nmap.sh 
+./autoscan_nmap.sh @ip_a_scanner
 ```
+  
+# autoscan_smtp
+Répondre
+
+La commande fournie est une commande nmap scan utilisée pour évaluer la sécurité d'un serveur SMTP (Simple Mail Transfer Protocol) sur le port 25. Cette commande inclut des scripts NSE (Nmap Scripting Engine) spécifiques pour effectuer diverses vérifications sur le serveur SMTP :
+
+
+--script=smtp-commands : ce script vérifie les commandes SMTP prises en charge sur le serveur.
+
+--script=smtp-enum-users : Il énumère les comptes d'utilisateurs sur le serveur SMTP.
+
+--script=smtp-vuln-cve2010-4344 : Vérifie les vulnérabilités liées à CVE-2010-4344.
+
+--script=smtp-vuln-cve2011-1720 : vérifie les vulnérabilités liées à CVE-2011-1720.
+
+--script=smtp-vuln-cve2011-1764 : vérifie les vulnérabilités liées à CVE-2011-1764.
+
+
+Cette commande peut être utilisée par les administrateurs réseau et les professionnels de la sécurité pour évaluer la sécurité des serveurs SMTP en identifiant les commandes prises en charge, en énumérant les utilisateurs et en recherchant les vulnérabilités connues. Il est crucial d'effectuer de telles analyses avec l'autorisation appropriée pour éviter les problèmes juridiques et éthiques.
+
+
+Veuillez noter que le $1 dans la commande doit être remplacé par l'adresse IP cible ou le nom d'hôte que vous souhaitez analyser.
+
 
 # Énumération du réseau en ligne de commande
 ```bash
