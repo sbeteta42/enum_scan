@@ -59,6 +59,27 @@ chmod +x autoscan_nmap.sh
 chmod +x autoscan_smtp.sh
 ./autoscan_smtp.sh @ip_a_scanner
 ```
+# autoscan_pop3_pop3s
+
+La script fourni est une commande nmap utilisée pour analyser les serveurs POP3 (Post Office Protocol version 3) afin de recueillir des informations sur leurs capacités ou les détails d'authentification NTLM (NT LAN Manager). - Voici une répartition de la commande :
+
+- nmap : Il s'agit de l'utilitaire de ligne de commande pour la découverte du réseau et l'audit de sécurité.
+
+--script pop3-capabilities ou pop3-ntlm-info : il spécifie la sélection du script Nmap. Vous pouvez choisir d'exécuter soit le script "pop3-capabilities", soit le script "pop3-ntlm-info". Ces scripts rassemblent des informations spécifiques sur les serveurs POP3. Vous pouvez remplacer « ou » par « et » pour exécuter les deux scripts simultanément.
+
+-sV : Cette option active la détection de version, qui permet d'identifier le service et sa version exécuté sur le port spécifié.
+
+-p 110,993 : Il spécifie les numéros de port à analyser. POP3 fonctionne généralement sur le port 110 pour les communications en texte clair et sur le port 993 pour les communications cryptées (POP3S).
+
+- Le $1 est un espace réservé pour l'adresse IP ou le nom d'hôte cible. Remplacez $1 par l'adresse cible réelle lors de l'utilisation de la commande.
+
+- En résumé, cette commande nmap est conçue pour analyser les serveurs POP3, identifier leurs capacités et collecter des informations sur l'authentification NTLM. Il peut être un outil utile pour les administrateurs réseau et les professionnels de la sécurité pour évaluer la sécurité des services POP3 sur un réseau.
+
+- Récuperer le script autoscan_nmap.sh dans files
+```bash
+chmod +x autoscan_pop3.sh
+./autoscan_pop3.sh @ip_a_scanner
+```
 
 # Énumération du réseau en ligne de commande
 ```bash
