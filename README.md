@@ -58,6 +58,7 @@ chmod +x autoscan_nmap.sh
 ```bash
 chmod +x autoscan_smtp.sh
 ./autoscan_smtp.sh @ip_a_scanner
+```
 
 # Énumération du réseau en ligne de commande
 ```bash
