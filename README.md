@@ -1,7 +1,7 @@
-# enum_scan
-Des Scans d'énumération de cibles en bash
+# Enums_Scan
+Des Scans d'énumération de cibles, ports et protocoles multiples en bash
 
-# autoscan_nmap
+## autoscan_nmap
 - Ce script scanne un réseau ou une @IP
    
 nmap -p- --min-rate 1000 "$target" 
@@ -28,6 +28,7 @@ Cette partie de la commande utilise Nmap, un outil d'analyse réseau. Il analyse
 | sed 's/,$//' 
 : Enfin, la commande sed est utilisée pour supprimer la virgule de fin de la liste.
 
+### Usage: 
 - Récuperer le script autoscan_nmap.sh dans files
 
 ```bash
@@ -35,7 +36,7 @@ chmod +x autoscan_nmap.sh
 ./autoscan_nmap.sh @ip_a_scanner
 ```
   
-# autoscan_smtp
+## autoscan_smtp
 
 - Ce script execute une commande nmap scan utilisée pour évaluer la sécurité d'un serveur SMTP (Simple Mail Transfer Protocol) sur le port 25.
 - Cette commande inclut des scripts NSE (Nmap Scripting Engine) spécifiques pour effectuer diverses vérifications sur le serveur SMTP :
@@ -54,12 +55,13 @@ chmod +x autoscan_nmap.sh
 - Il est crucial d'effectuer de telles analyses avec l'autorisation appropriée pour éviter les problèmes juridiques et éthiques.
 - Veuillez noter que le $1 dans la commande doit être remplacé par l'adresse IP cible ou le nom d'hôte que vous souhaitez analyser.
 
+### usage: 
 - Récuperer le script autoscan_nmap.sh dans files
 ```bash
 chmod +x autoscan_smtp.sh
 ./autoscan_smtp.sh @ip_a_scanner
 ```
-# autoscan_pop3_pop3s
+## autoscan_pop3_pop3s
 
 La script fourni est une commande nmap utilisée pour analyser les serveurs POP3 (Post Office Protocol version 3) afin de recueillir des informations sur leurs capacités ou les détails d'authentification NTLM (NT LAN Manager). - Voici une répartition de la commande :
 
@@ -100,7 +102,7 @@ nmap -p <ports> -sV -sC -A $IP
 ```bash
 nmap -sS -p- --min-rate=1000 10.11.1.229 -Pn #stealth scans
 ```
-# Enumération sur les Ports SMB 139 445
+## Enumération sur les Ports SMB 139 445
 
 - Port 139 NetBIOS signifie Network Basic Input Output System.
 - Il s'agit d'un protocole logiciel qui permet aux applications, aux PC et aux ordinateurs de bureau d'un réseau local (LAN) de communiquer avec le matériel réseau et de transmettre des données sur le réseau.
@@ -116,7 +118,7 @@ nmap -sS -p- --min-rate=1000 10.11.1.229 -Pn #stealth scans
 - Les lignes de commande fournies sont des exemples d'utilisation de l'outil Nmap pour effectuer diverses analyses d'énumération et de vulnérabilité SMB (Server Message Block) sur un hôte distant utilisant le port 445.
 - SMB est un protocole réseau utilisé pour partager des fichiers, des imprimantes et d'autres ressources sur un réseau.
 
-## Voici une répartition des commandes :
+### Voici une répartition des commandes :
 
 nmap --script smb-enum-shares.nse -p445 $IP
 - : cette commande utilise le script Nmap smb-enum-shares.nse pour énumérer les ressources partagées sur l'hôte cible sur le port 445.
