@@ -75,6 +75,7 @@ La script fourni est une commande nmap utilisée pour analyser les serveurs POP3
 
 - En résumé, cette commande nmap est conçue pour analyser les serveurs POP3, identifier leurs capacités et collecter des informations sur l'authentification NTLM. Il peut être un outil utile pour les administrateurs réseau et les professionnels de la sécurité pour évaluer la sécurité des services POP3 sur un réseau.
 
+### usage: 
 - Récuperer le script autoscan_nmap.sh dans files
 ```bash
 chmod +x autoscan_pop3.sh
@@ -134,3 +135,10 @@ nmap --script smb-vuln-cve-2017-7494 --script-args smb-vuln-cve-2017-7494.check-
 
 - Veuillez noter que pour utiliser ces commandes, vous devez remplacer $IP par l'adresse IP réelle de l'hôte cible que vous souhaitez analyser.
 -  De plus, ces commandes doivent être utilisées de manière responsable et uniquement sur les systèmes que vous êtes autorisé à analyser.
+
+### usage: 
+- Récuperer le script autoscan_smb-vulner.sh dans files
+```bash
+chmod +x autoscan_smb-vulner.sh
+./autoscan_pop3.sh @ip_a_scanner
+```
